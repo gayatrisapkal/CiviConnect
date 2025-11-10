@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CiviConnect | Settings</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+    margin: 0;
+    color: #343a40;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: linear-gradient(180deg, #3a7bd5, #3a6073);
+    color: #fff;
+    min-height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 25px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+  }
+  .sidebar h4 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+  }
+  .sidebar a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    margin: 5px 10px;
+    font-weight: 500;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.05);
+  }
+  .sidebar a i {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+  .sidebar a:hover {
+    background: linear-gradient(90deg, #6fb1fc, #3a7bd5);
+    color: #fff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Main Content */
+  .main-content {
+    margin-left: 220px;
+    padding: 30px;
+  }
+
+  /* Navbar */
+  .navbar-custom {
+    background: linear-gradient(90deg, #3a7bd5, #3a6073);
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  .navbar-custom h5 {
+    color: #fff;
+    margin: 0;
+  }
+  .navbar-custom .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .navbar-custom .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+  }
+  .navbar-custom .user-info img:hover {
+    transform: scale(1.1);
+  }
+  .navbar-custom .user-info span {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  /* Settings Card */
+  .settings-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .settings-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.15);
+  }
+  .settings-card h5 {
+    color: #3a6073;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .form-control, .btn-custom {
+    border-radius: 12px;
+  }
+  .btn-custom {
+    background: #3a7bd5;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn-custom:hover {
+    background: #285a8c;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 60px;
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4>CiviConnect</h4>
+    <a href="dashboard.html"><i class="bi bi-speedometer2"></i> <span>Dashboard</span></a>
+    <a href="request.html"><i class="bi bi-card-checklist"></i> <span>Requests</span></a>
+    <a href="professional.html"><i class="bi bi-people"></i> <span>Professionals</span></a>
+    <a href="profile.html"><i class="bi bi-person-circle"></i> <span>Profile</span></a>
+    <a href="setting.html"><i class="bi bi-gear"></i> <span>Settings</span></a>
+    <a href="#"><i class="bi bi-box-arrow-right"></i> <span>Logout</span></a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Navbar -->
+    <div class="navbar-custom">
+      <h5>Settings</h5>
+      <div class="user-info">
+        <i class="bi bi-bell-fill"></i>
+        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="User">
+        <span>Sarthak Bobade</span>
+      </div>
+    </div>
+
+    <!-- Account Settings Card -->
+    <div class="settings-card">
+      <h5>Account Settings</h5>
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Full Name" value="Sarthak Bobade">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email" value="sarthak@example.com">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="password" class="form-control" placeholder="Current Password">
+          </div>
+          <div class="col-md-6">
+            <input type="password" class="form-control" placeholder="New Password">
+          </div>
+        </div>
+        <button type="submit" class="btn btn-custom w-100">Update Account</button>
+      </form>
+    </div>
+
+    <!-- Notification Settings Card -->
+    <div class="settings-card">
+      <h5>Notification Preferences</h5>
+      <form>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="emailNotif" checked>
+          <label class="form-check-label" for="emailNotif">Email Notifications</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="smsNotif">
+          <label class="form-check-label" for="smsNotif">SMS Notifications</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="pushNotif" checked>
+          <label class="form-check-label" for="pushNotif">Push Notifications</label>
+        </div>
+        <button type="submit" class="btn btn-custom mt-2">Save Notifications</button>
+      </form>
+    </div>
+
+    <!-- Privacy Settings Card -->
+    <div class="settings-card">
+      <h5>Privacy Settings</h5>
+      <form>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="showProfile" checked>
+          <label class="form-check-label" for="showProfile">Show Profile to Other Users</label>
+        </div>
+        <div class="form-check mb-2">
+          <input class="form-check-input" type="checkbox" value="" id="shareLocation">
+          <label class="form-check-label" for="shareLocation">Share Location with Professionals</label>
+        </div>
+        <button type="submit" class="btn btn-custom mt-2">Save Privacy Settings</button>
+      </form>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

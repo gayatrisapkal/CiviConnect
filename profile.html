@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CiviConnect | Profile</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #3a7bd5, #3a6073);
+    margin: 0;
+    color: #343a40;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: linear-gradient(180deg, #3a7bd5, #3a6073);
+    color: #fff;
+    min-height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 25px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+  }
+  .sidebar h4 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #fff;
+  }
+  .sidebar a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 12px;
+    margin: 5px 10px;
+    font-weight: 500;
+    transition: 0.3s;
+    background: rgba(255,255,255,0.05);
+  }
+  .sidebar a i {
+    margin-right: 12px;
+    font-size: 18px;
+  }
+  .sidebar a:hover {
+    background: linear-gradient(90deg, #6fb1fc, #3a7bd5);
+    color: #fff;
+    transform: translateX(5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  }
+
+  /* Main Content */
+  .main-content {
+    margin-left: 220px;
+    padding: 30px;
+  }
+
+  /* Navbar */
+  .navbar-custom {
+    background: linear-gradient(90deg, #3a7bd5, #3a6073);
+    color: #fff;
+    border-radius: 12px;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  }
+  .navbar-custom h5 {
+    color: #fff;
+    margin: 0;
+  }
+  .navbar-custom .user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .navbar-custom .user-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+  }
+  .navbar-custom .user-info img:hover {
+    transform: scale(1.1);
+  }
+  .navbar-custom .user-info span {
+    color: #fff;
+    font-weight: 500;
+  }
+
+  /* Profile Card */
+  .profile-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.1);
+    max-width: 800px;
+    margin: auto;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.15);
+  }
+  .profile-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid #3a7bd5;
+    margin-bottom: 20px;
+  }
+  .profile-card h4 {
+    font-weight: 600;
+    color: #3a6073;
+    margin-bottom: 10px;
+  }
+  .profile-card p {
+    color: #6c757d;
+    margin-bottom: 20px;
+  }
+
+  .form-control, .btn-custom {
+    border-radius: 12px;
+  }
+  .btn-custom {
+    background: #3a7bd5;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn-custom:hover {
+    background: #285a8c;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 60px;
+      padding: 20px;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h4>CiviConnect</h4>
+    <a href="dashboard.html"><i class="bi bi-speedometer2"></i> <span>Dashboard</span></a>
+    <a href="request.html"><i class="bi bi-card-checklist"></i> <span>Requests</span></a>
+    <a href="professional.html"><i class="bi bi-people"></i> <span>Professionals</span></a>
+    <a href="profile.html"><i class="bi bi-person-circle"></i> <span>Profile</span></a>
+    <a href="setting.html"><i class="bi bi-gear"></i> <span>Settings</span></a>
+    <a href="logout.html"><i class="bi bi-box-arrow-right"></i> <span>Logout</span></a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Navbar -->
+    <div class="navbar-custom">
+      <h5>My Profile</h5>
+      <div class="user-info">
+        <i class="bi bi-bell-fill"></i>
+        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="User">
+        <span>Sarthak Bobade</span>
+      </div>
+    </div>
+
+    <!-- Profile Card -->
+    <div class="profile-card">
+      <div class="text-center">
+        <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="Profile Picture">
+        <h4>Sarthak Bobade</h4>
+        <p>Email: sarthak@example.com | Phone: +91 9876543210</p>
+      </div>
+
+      <form>
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="text" class="form-control" placeholder="Full Name" value="Sarthak Bobade">
+          </div>
+          <div class="col-md-6">
+            <input type="email" class="form-control" placeholder="Email" value="sarthak@example.com">
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Primary Contact" value="+91 9876543210">
+          </div>
+          <div class="col-md-6">
+            <input type="tel" class="form-control" placeholder="Alternate Contact" value="+91 9123456780">
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Address" value="123, Green Park, Pune">
+        </div>
+
+        <div class="row mb-3">
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="City" value="Pune">
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="State" value="Maharashtra">
+          </div>
+          <div class="col-md-4">
+            <input type="text" class="form-control" placeholder="Zip Code" value="411001">
+          </div>
+        </div>
+
+        <!-- Map Section -->
+<div class="mb-3">
+  <label for="map" class="form-label">Set Your Location:</label>
+  <div id="map" style="width: 100%; height: 300px; border-radius:12px;"></div>
+  <input type="hidden" id="latitude" name="latitude" value="18.5204">
+  <input type="hidden" id="longitude" name="longitude" value="73.8567">
+</div>
+
+<script>
+  function initMap() {
+    const initialLocation = { lat: 20.9175176, lng: 77.754405 }; // Default Pune
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 13,
+      center: initialLocation,
+    });
+
+    const marker = new google.maps.Marker({
+      position: initialLocation,
+      map: map,
+      draggable: true,
+    });
+
+    // Update hidden inputs when marker is moved
+    marker.addListener('dragend', function(event) {
+      document.getElementById('latitude').value = event.latLng.lat();
+      document.getElementById('longitude').value = event.latLng.lng();
+    });
+  }
+</script>
+
+<!-- Load Google Maps API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOn8vCmF4xii6UCnHxRXgLfbFLDT-LEJA&callback=initMap" async defer></script>
+
+
+        <div class="mb-3">
+          <input type="password" class="form-control" placeholder="New Password">
+        </div>
+
+        <button type="submit" class="btn btn-custom w-100">Update Profile</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

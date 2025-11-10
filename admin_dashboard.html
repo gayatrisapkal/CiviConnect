@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CiviConnect | Admin Dashboard</title>
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f2f5;
+    margin:0;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    background: linear-gradient(180deg, #3a7bd5, #3a6073);
+    color: #fff;
+    min-height: 100vh;
+    width: 220px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 25px;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 4px 0 20px rgba(0,0,0,0.15);
+  }
+  .sidebar h4 { text-align:center; margin-bottom:25px; font-weight:600; }
+  .sidebar a { color:#fff; display:flex; align-items:center; padding:12px 20px; text-decoration:none;
+    border-radius:12px; margin:5px 10px; font-weight:500; transition:0.3s; background: rgba(255,255,255,0.05);}
+  .sidebar a i { margin-right:12px; font-size:18px; }
+  .sidebar a:hover { background: linear-gradient(90deg, #6fb1fc, #3a7bd5); transform:translateX(5px); box-shadow:0 4px 15px rgba(0,0,0,0.2); }
+
+  /* Main Content */
+  .main-content { margin-left:220px; padding:30px; }
+
+  /* Navbar */
+  .navbar-custom {
+    background: linear-gradient(90deg, #3a7bd5, #3a6073); color:#fff;
+    border-radius:12px; padding:12px 20px; display:flex;
+    justify-content:space-between; align-items:center; margin-bottom:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+  }
+  .navbar-custom h5 { color:#fff; margin:0; }
+  .navbar-custom .user-info { display:flex; align-items:center; gap:12px; }
+  .navbar-custom .user-info img { width:40px; height:40px; border-radius:50%; border:2px solid #fff; transition: transform 0.3s ease; }
+  .navbar-custom .user-info img:hover { transform:scale(1.1); }
+  .navbar-custom .user-info span { color:#fff; font-weight:500; }
+
+  /* Dashboard Cards */
+  .dashboard-card {
+    background:#fff; border-radius:16px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .dashboard-card:hover { transform:translateY(-5px); box-shadow:0 12px 30px rgba(0,0,0,0.15);}
+  .dashboard-card h6 { font-weight:600; margin-bottom:10px; }
+  .dashboard-card p { font-size:14px; color:#555; }
+
+  /* Tables */
+  .table-responsive { background:#fff; border-radius:16px; padding:20px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+
+  @media (max-width:768px) {
+    .main-content { margin-left:60px; padding:20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <h4>CiviConnect Admin</h4>
+  <a href="admin_dashboard.html"><i class="bi bi-speedometer2"></i> <span>Dashboard</span></a>
+  <a href="manage_users.html"><i class="bi bi-people"></i> <span>Users</span></a>
+  <a href="manage_providers.html"><i class="bi bi-briefcase"></i> <span>Service Providers</span></a>
+  <a href="all_requests.html"><i class="bi bi-card-checklist"></i> <span>Requests</span></a>
+  <a href="setting1.html"><i class="bi bi-gear"></i> <span>Setting</span></a>
+  <a href="logout.html"><i class="bi bi-box-arrow-right"></i> <span>Logout</span></a>
+</div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <!-- Navbar -->
+  <div class="navbar-custom">
+    <h5>Admin Dashboard</h5>
+    <div class="user-info">
+      <i class="bi bi-bell-fill"></i>
+      <img src="https://cdn-icons-png.flaticon.com/512/147/147144.png" alt="User">
+      <span>Admin</span>
+    </div>
+  </div>
+
+  <!-- Dashboard Cards -->
+  <div class="row g-4 mb-4">
+    <div class="col-md-3">
+      <div class="dashboard-card text-center">
+        <h6>Total Users</h6>
+        <p>1,245</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="dashboard-card text-center">
+        <h6>Total Service Providers</h6>
+        <p>342</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="dashboard-card text-center">
+        <h6>Pending Requests</h6>
+        <p>56</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="dashboard-card text-center">
+        <h6>Completed Requests</h6>
+        <p>1,102</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Recent Requests Table -->
+  <div class="table-responsive">
+    <h6 class="mb-3">Recent Requests</h6>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>User</th>
+          <th>Service</th>
+          <th>Status</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Sarthak Bobade</td>
+          <td>Plumbing</td>
+          <td><span class="badge bg-warning">Pending</span></td>
+          <td>29-09-2025</td>
+          <td><button class="btn btn-sm btn-primary">View</button></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Riya Sharma</td>
+          <td>Electrician</td>
+          <td><span class="badge bg-success">Completed</span></td>
+          <td>28-09-2025</td>
+          <td><button class="btn btn-sm btn-primary">View</button></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Rahul Verma</td>
+          <td>Cleaning</td>
+          <td><span class="badge bg-danger">Rejected</span></td>
+          <td>27-09-2025</td>
+          <td><button class="btn btn-sm btn-primary">View</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
